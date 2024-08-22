@@ -4,8 +4,8 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 -- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
+--keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
+--keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
 
 -- incrimant/decrement
 keymap.set("n", "+", "<C-a>")
@@ -34,6 +34,9 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+--- obsidian
+keymap.set("n", "<Leader>sO", ":ObsidianSearch<Return>")
 
 --- diagnostics
 keymap.set("n", "<C-j>", function()

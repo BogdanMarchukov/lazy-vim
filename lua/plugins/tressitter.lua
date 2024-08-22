@@ -18,6 +18,7 @@ return {
       "graphql",
       "prisma",
       "yaml",
+      "rust",
     },
   },
 }

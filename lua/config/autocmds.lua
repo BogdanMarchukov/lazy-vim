@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "lua", "typescript", "prisma", "javascript" },
+  pattern = { "lua", "typescript", "prisma", "javascript", "rust", "graphql", "markdown", "env", "json", "tsx", "css" },
   callback = function()
     vim.b.autoformat = false
   end,
