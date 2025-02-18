@@ -25,3 +25,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    local project_root = vim.fn.finddir('.git/..', ';')
+    if project_root ~= '' then
+      vim.cmd('cd ' .. project_root)
+    end
+  end
+})
